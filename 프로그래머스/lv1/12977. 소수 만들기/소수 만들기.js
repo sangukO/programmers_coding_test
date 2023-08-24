@@ -8,6 +8,7 @@ function solution(nums) {
             }
         }
     }
+    
     for(i=0;i<arr.length;i++) {
         var c = 0;
         for(j=2;j<arr[i];j++) {
