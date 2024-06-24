@@ -1,10 +1,15 @@
 function solution(ingredient) {
     var answer = 0;
+    var stack = [];
     for (i=0;i<ingredient.length;i++) {
-        if (ingredient[i]===1 && ingredient[i+1]===2 && ingredient[i+2] === 3 && ingredient[i+3]===1) {
-            ingredient.splice(i, 4);
+        stack.push(ingredient[i]);
+        if ( stack.length >= 4
+            && stack[stack.length-4]===1
+            && stack[stack.length-3]===2
+            && stack[stack.length-2] === 3
+            && stack[stack.length-1]===1) {
+            stack.splice(-4);
             answer++;
-            i=i-4;
         }
     }
     return answer;
