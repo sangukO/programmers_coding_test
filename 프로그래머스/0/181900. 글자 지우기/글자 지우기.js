@@ -1,9 +1,7 @@
 function solution(my_string, indices) {
-    var answer = [];
-    for(let i=0;i<my_string.length;i++) {
-        if (!indices.includes(i)) {
-            answer.push(my_string[i]);
-        }
-    }
-    return answer.join('');
+    var answer = [...my_string];
+    
+    return answer.filter((v, i) => {
+        return !indices.includes(i)
+    }).join('');
 }
