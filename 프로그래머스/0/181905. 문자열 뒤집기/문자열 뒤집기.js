@@ -7,6 +7,6 @@ function solution(my_string, s, e) {
     reversedStr = [...slicedStr].reverse().join('');
     
 
-    answer = my_string.slice(0, s) + reversedStr + my_string.slice(e+1, my_string.length);
+    answer = my_string.slice(0, s) + reversedStr + my_string.slice(e+1);
     return answer;
 }
