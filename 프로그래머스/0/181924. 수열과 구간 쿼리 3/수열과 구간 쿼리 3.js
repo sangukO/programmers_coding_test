@@ -5,10 +5,8 @@ function solution(arr, queries) {
         let secondIndex = queries[i][1];
         let secondNum = arr[secondIndex];
         
-        arr.splice(firstIndex, 1);
-        arr.splice(secondIndex-1, 1);
-        arr.splice(firstIndex, 0, secondNum);
-        arr.splice(secondIndex, 0, firstNum);
+        arr[firstIndex] = secondNum;
+        arr[secondIndex] = firstNum;
     }
     return arr;
 }
