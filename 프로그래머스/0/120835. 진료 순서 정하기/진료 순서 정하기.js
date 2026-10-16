@@ -1,10 +1,9 @@
 function solution(emergency) {
-    var answer = [];
-    let sortedArray = [...emergency].sort((a, b) => {return b - a});
+    let sortedArray = [...emergency].sort((a, b) => b - a);
     
-    for (let num of emergency) {
-        answer.push(sortedArray.indexOf(num)+1);
-    }
+    // for (let num of emergency) {
+    //     answer.push(sortedArray.indexOf(num)+1);
+    // }
     
-    return answer;
+    return emergency.map(num => sortedArray.indexOf(num) + 1);
 }
